@@ -29,3 +29,10 @@ Seen at 0:00 in the 2020-03-08 video: https://www.youtube.com/watch?v=KrgYEdb-Fl
 
 ![With Guzheng Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/withGuzheng/withGuzhengPreview.png?raw=true)
 
+# With Guzheng Sound
+
+Heard at 0:00 in the 2020-03-08 video: https://www.youtube.com/watch?v=KrgYEdb-Fls
+
+Note: chinaCOVID19deathCount.txt is a timetable describing all the times that a guzheng sound should play (in 44,000 Hz samples) If you run coronasounder.py, it will read that timetable, and use the 6 sounds in the "sounds" folder to play a Guzheng sound at each time interval listed! Also, sometimes, Windows Media Player is unable to play the output file. When that happens, I just load the .wav file successfully in Audactiy (https://www.audacityteam.org/), and then save it as a new file.
+
+![With Guzheng Sound Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/withGuzhengSound/withGuzhengSoundPreview.png?raw=true)
