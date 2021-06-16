@@ -29,6 +29,12 @@ Seen at 0:00 in the 2020-06-29 video: https://www.youtube.com/watch?v=3HHOK1gNyp
 
 ![Korea USA Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/koreaUSA/koreaUSApreview.png?raw=true)
 
+# Mask Trendline
+
+Seen at 0:00 in the 2021-01-10 video: https://www.youtube.com/watch?v=x7KYJ1MFGdc
+
+![Mask Trendline Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/maskTrendline/maskTrendlinePreview.png?raw=true)
+
 # Nervous Emoji
 
 Note: This visualization seems to downplay the severity of the virus, which I now regret. At the time of making it (Feb 12, 2020), there had been 2 deaths outside China. I was worried that people were treating this outbreak the same way they had the 2014 Ebola outbreak, which was panic and xenophobia. So, I was trying to provide a more levelled perspective to convey to people to not overreact. However, in hindsight, this visualization made the virus seem less deadly than it truly became, which was my mistake. I'm posting this code in the spirit of open-sourcing everything, but I hope people don't use it to downplay the virus further. (If the code is edited to show recent data, it should accurately reflect how serious it is.)
