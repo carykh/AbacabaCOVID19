@@ -12,9 +12,9 @@ VideoExport videoExport;
 String[] monthNames = {"JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"};
 
 int DAY_LEN;
-int PEOPLE_COUNT;
+int REGION_COUNT;
 String[] textFile;
-Person[] people;
+Region[] regions;
 int TOP_VISIBLE = 15;
 float[] maxes;
 float[] topTotals;
@@ -58,7 +58,7 @@ void setup(){
   textFile = loadStrings("kusa"+pstr+".csv");
   String[] parts = textFile[0].split(",");
   DAY_LEN = parts.length-1;
-  PEOPLE_COUNT = textFile.length-1;
+  REGION_COUNT = textFile.length-1;
   
   maxes = new float[DAY_LEN];
   topTotals = new float[DAY_LEN];
@@ -67,26 +67,26 @@ void setup(){
     maxes[d] = 7;
   }
   
-  people = new Person[PEOPLE_COUNT];
-  //for(int i = 0; i < PEOPLE_COUNT; i++){
-  //  people[i] = new Person(parts[i+1]);
+  regions = new Region[REGION_COUNT];
+  //for(int i = 0; i < REGION_COUNT; i++){
+  //  regions[i] = new Region(parts[i+1]);
   //}
-  for(int p = 0; p < PEOPLE_COUNT; p++){
+  for(int p = 0; p < REGION_COUNT; p++){
     String[] dataParts = textFile[p].split(",");
-    people[p] = new Person(dataParts[0]);
+    regions[p] = new Region(dataParts[0]);
     for(int d = 0; d < DAY_LEN; d++){
       float val = Float.parseFloat(dataParts[d+1]);
-      people[p].values[d] = val;
+      regions[p].values[d] = val;
       if(val > maxes[d]){
         maxes[d] = val;
       }
     }
   }
   getRankings();
-  for(int p = 0; p < PEOPLE_COUNT; p++){
+  for(int p = 0; p < REGION_COUNT; p++){
     for(int d = 0; d < DAY_LEN; d++){
       if((p < 17) == KOREAN){
-        topTotals[d] += people[p].values[d];
+        topTotals[d] += regions[p].values[d];
       }
     }
   }
@@ -259,8 +259,8 @@ String weirdify(int v){
 }
 void drawBars(){
   noStroke();
-  for(int p = 0; p < PEOPLE_COUNT; p++){
-    Person pe = people[p];
+  for(int p = 0; p < REGION_COUNT; p++){
+    Region pe = regions[p];
     float val = WAIndex(pe.values,currentDay,1);
     float x = valueToX(val);
     float rank = WAIndex(pe.ranks, currentDay, 1);
@@ -299,17 +299,17 @@ String rankify(int s){
 }
 void getRankings(){
   for(int d = 0; d < DAY_LEN; d++){
-    boolean[] taken = new boolean[PEOPLE_COUNT];
-    for(int p = 0; p < PEOPLE_COUNT; p++){
+    boolean[] taken = new boolean[REGION_COUNT];
+    for(int p = 0; p < REGION_COUNT; p++){
       taken[p] = false;
     }
     for(int spot = 0; spot < TOP_VISIBLE; spot++){
       float record = -1;
       int holder = -1;
-      for(int p = 0; p < PEOPLE_COUNT; p++){
+      for(int p = 0; p < REGION_COUNT; p++){
         if((p < 17) == KOREAN){
           if(!taken[p]){
-            float val = people[p].values[d];
+            float val = regions[p].values[d];
             if(val > record){
               record = val;
               holder = p;
@@ -317,8 +317,8 @@ void getRankings(){
           }
         }
       }
-      if(people[holder].values[d] >= 1){
-        people[holder].ranks[d] = spot;
+      if(regions[holder].values[d] >= 1){
+        regions[holder].ranks[d] = spot;
       }
       taken[holder] = true;
     }
