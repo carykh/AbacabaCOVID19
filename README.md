@@ -7,6 +7,14 @@ Seen at 3:14 in the 2020-02-28 video: https://www.youtube.com/watch?v=9PYKYjkqnG
 
 ![China Dot Map Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/chinaDotMap/chinaDotMapPreview.png?raw=true)
 
+# Falling Piles
+
+Seen at 2:51 in the 2020-04-02 video: https://www.youtube.com/watch?v=sz1bGzYdRdk&t=171s
+
+Seen at 0:00 in the 2020-04-10 video: https://www.youtube.com/watch?v=x_wZQ8fVIwQ
+
+![Falling Piles Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/fallingPiles/fallingPilesPreview.png?raw=true)
+
 # Floating Bubble
 
 Seen at 4:42 in the 2020-02-12 video: https://www.youtube.com/watch?v=6dDD2tHWWnU&t=282s
