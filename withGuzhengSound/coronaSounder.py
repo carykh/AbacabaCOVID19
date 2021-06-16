@@ -6,8 +6,8 @@ import numpy as np
 import math
 import random
 
-TIMETABLE_FILE = "chinaDeath.txt"
-OUTPUT_FILE = "chinaDeath.wav"
+TIMETABLE_FILE = "chinaCOVID19deathCount.txt"
+OUTPUT_FILE = "chinaCOVID19deathCount.wav"
 SOUND_FILES = "sounds/guzheng"
 
 f = open(TIMETABLE_FILE,"r+",encoding="utf-8")
