@@ -23,3 +23,9 @@ Seen at 5:44 in the 2020-02-12 video: https://www.youtube.com/watch?v=6dDD2tHWWn
 
 ![Nervous Emoji Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/nervousEmoji/nervousEmojiPreview.png?raw=true)
 
+# With Guzheng
+
+Seen at 0:00 in the 2020-03-08 video: https://www.youtube.com/watch?v=KrgYEdb-Fls
+
+![With Guzheng Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/withGuzheng/withGuzhengPreview.png?raw=true)
+
