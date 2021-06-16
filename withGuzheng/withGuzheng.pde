@@ -1,6 +1,8 @@
 import java.math.*;
 import com.hamoid.*;
-boolean SAVE_VIDEO = true;
+boolean SAVE_SOUND_TIMETABLE = true;
+String SOUND_TIMETABLE_FILENAME = "otherSoundTimetable.txt";
+boolean SAVE_VIDEO = false;
 String VIDEO_FILENAME = "test.mp4";
 VideoExport videoExport;
 
@@ -35,7 +37,7 @@ PImage worldImage;
 PImage countryImage;
 PImage watermark;
 
-PrintWriter deathsText;
+PrintWriter soundTimetableFile;
 
 float W_W = 1920;
 float W_H = 1080;
@@ -153,6 +155,10 @@ void setup(){
       finalRanking = rankings;
     }
   }
+  
+  if(SAVE_SOUND_TIMETABLE){
+    saveSoundTimetable();
+  }
   size(1920,1080);
   
   if(SAVE_VIDEO){
@@ -198,6 +204,21 @@ void draw(){
     exit();
   }
   frames++;
+}
+void saveSoundTimetable(){
+  soundTimetableFile = createWriter(SOUND_TIMETABLE_FILENAME);
+  int SAMPS = 44100*4;
+  int prevDeaths = 0;
+  for(int sam = 0; sam < SAMPS*DAY_LEN; sam++){
+    float day = ((float)sam)/SAMPS;
+    int thisDeaths = (int)(snapIndex(world.data[2],day)+0.15); // this stores the number of total deaths in the world on that day
+    if(thisDeaths > prevDeaths){
+      soundTimetableFile.println(sam);
+      prevDeaths = thisDeaths;
+    }
+  }
+  soundTimetableFile.flush();
+  soundTimetableFile.close();
 }
 void drawDowGraph(float x, float y, int w, int h){
   fill(BG_SHADE);
@@ -526,10 +547,26 @@ int findSpotFor(ArrayList<Integer> rankings, float val, int day, int s, int e){
     return findSpotFor(rankings,val,day,s,mid-1);
   }
 }
-String capitalize(String s){
+String capitalize(String preS){
+  String s = preS.replace("-"," ");
+  
+  String lowerS = s.toLowerCase();
+  if(lowerS.equals("us") || lowerS.equals("united states")){
+    return "USA";
+  }else if(lowerS.equals("uk") || lowerS.equals("united kingdom")){
+    return "UK";
+  }else if(lowerS.equals("united arab emirates")){
+    return "UAE";
+  }else if(lowerS.equals("south korea")){
+    return "S. Korea";
+  }
+  
   String result = "";
   for(int i = 0; i < s.length(); i++){
-    if(i == 0 || (i >= 1 && s.charAt(i-1) == ' ')){
+    if(i < s.length()-4 && s.substring(i,i+4).equals("and ") ||
+    i < s.length()-3 && s.substring(i,i+3).equals("of ")){
+      result = result+s.charAt(i);
+    }else if(i == 0 || (i >= 1 && s.charAt(i-1) == ' ')){
       result = result+s.toUpperCase().charAt(i);
     }else{
       result = result+s.charAt(i);
