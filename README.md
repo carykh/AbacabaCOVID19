@@ -1,7 +1,11 @@
 # AbacabaCOVID19
 A dumping ground for all my COVID-19 visualizations posted here: https://www.youtube.com/user/1abacaba1/videos
 
+# China Dot Map
 
+Seen at 3:14 in the 2020-02-28 video: https://www.youtube.com/watch?v=9PYKYjkqnGU&t=194s
+
+![China Dot Map Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/chinaDotMap/chinaDotMapPreview.png?raw=true)
 
 # Floating Bubble
 
