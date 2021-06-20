@@ -29,6 +29,14 @@ Seen at 0:00 in the 2020-06-29 video: https://www.youtube.com/watch?v=3HHOK1gNyp
 
 ![Korea USA Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/koreaUSA/koreaUSApreview.png?raw=true)
 
+# Line Graph
+
+Seen many times. One of the first times was at 1:09 in the 2020-03-19 video: https://www.youtube.com/watch?v=n4no04822NQ&t=69s
+
+One of the more recent times is at 0:17 in the 2021-01-20 video: https://www.youtube.com/watch?v=i7SNyzmKXUE&t=17s
+
+![Line Graph Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/koreaUSA/lineGraphPreview.png?raw=true)
+
 # Livestream (BROKEN)
 
 Note: You won't be able to get this code to run. Here was how the code was originally supposed to work: You run scraper.py in one command prompt, which loads the worldometers.com/coronavirus website every 60 seconds looking for updates. Simultaneously, you run visualizer.py in another command prompt, which reads from the dataStream.txt file that scraper.py outputs, and turns that data into a 30 FPS video output that can then be livestreamed. However, when I try to run this code these days, I get a 403 Forbidden error from worldometers. This probably means none of you will be able to get the livestream up and working, either. I'm only including this code here in case anybody is curious in my coding style/process/workflow, but not necessarily seeing it work in action.
