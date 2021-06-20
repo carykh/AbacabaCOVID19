@@ -35,7 +35,7 @@ Seen many times. One of the first times was at 1:09 in the 2020-03-19 video: htt
 
 One of the more recent times is at 0:17 in the 2021-01-20 video: https://www.youtube.com/watch?v=i7SNyzmKXUE&t=17s
 
-![Line Graph Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/koreaUSA/lineGraphPreview.png?raw=true)
+![Line Graph Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/lineGraph/lineGraphPreview.png?raw=true)
 
 # Livestream (BROKEN)
 
