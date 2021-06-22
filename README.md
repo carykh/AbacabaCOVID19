@@ -77,6 +77,8 @@ Compares the COVID-19 death toll in the United States with the death tolls of ot
 
 Seen at 6:27 in the 2020-05-31 video: https://www.youtube.com/watch?v=b1hRKhHhOF4&t=387s
 
+![USA Flu Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/USAflu/USAfluPreview.png?raw=true)
+
 # With Guzheng
 
 Seen at 0:00 in the 2020-03-08 video: https://www.youtube.com/watch?v=KrgYEdb-Fls
