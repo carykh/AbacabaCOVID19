@@ -1,6 +1,15 @@
 # AbacabaCOVID19
 A dumping ground for all my COVID-19 visualizations posted here: https://www.youtube.com/user/1abacaba1/videos
 
+These visualizations all use Processing 3 to draw the actual visualization videos: https://processing.org/  If you'd like to run these code snippets and save them to a video file, you'll also need "Hamoid's Video Exporter", a library that allows to export directly to .mp4 video files from within Processing. Here is a demonstration of me downloading and using the Hamoid library: https://www.youtube.com/watch?v=ol6PM0BMjzI&list=PLsRQr3mpFF3Khoca0cXA8-_tSloCwlZK8&index=10  A handful of visualizations also have Python scripts to do non-video related tasks, like sound processing.
+
+
+Watch this video for a brief explanation about what this repo is: [video is not out yet]
+
+Note: I programmed most of these visualizations as fast as possible within a couple days of worldometer's data coming out, since I wanted to give the public the most up-to-date summaries as possible. As a result, none of them are really designed with ease-of-use, coding style, or collaborator-friendliness in mind. That's why you might find that my code seems very hard to understand or tweak, and I apologize for that. However, I won't be regularly maintaining this code or providing coding assistance to new programmers for this project. This repo is supposed to be a dumping ground of my personal projects, that just happens to be public, in case people are curious!
+
+Also: The data-visualization called "GapMinder Inspired" is designed to collect up-to-date data in an easy way. As in, there is a single Python script that reads the data from worldometers.com, assuming that website doesn't drastically update in the future (after 2021-06-21). Watch the above video for a demonstration on how to run it. For all the other data-visualizations, there is simply a data file (perhaps called something like "worldData.csv", that I downloaded and compiled at the time, but is frozen in time (meaning, it won't update). You're free to update/change these as you wish, but it will take a bit of work on your end, since there isn't any "data-collecting" script for those!
+
 # China Dot Map
 
 Seen at 3:14 in the 2020-02-28 video: https://www.youtube.com/watch?v=9PYKYjkqnGU&t=194s
@@ -40,6 +49,10 @@ Inspired by Hans Rosling's work with scatter plot visualizations at Gapminder: h
 Seen at 0:17 in the 2020-11-07 video: https://www.youtube.com/watch?v=eeiguFaRil0&t=17s
 
 Seen at 2:27 in the 2021-01-21 video: https://www.youtube.com/watch?v=i7SNyzmKXUE&t=2m27s
+
+getCountryList.py will scrape worldometers.com and save a list of all countries. You don't need to ever run this, because countryList.tsv is in the repo.
+
+Running getData.py will download the most recent international data of COVID-19 cases and deaths from worldometers.com, and processData.py will process it into one compact file that the Processing visualizer can interpret. Check out and modify the first few lines of both Python files to allow those scripts to download US state data instead of country data.
 
 ![Gapminder Inspired Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/gapminderInspired/gapminderInspiredPreview.png?raw=true)
 
