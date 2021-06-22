@@ -9,9 +9,11 @@ Seen at 3:14 in the 2020-02-28 video: https://www.youtube.com/watch?v=9PYKYjkqnG
 
 # Country Flu
 
+Compares the COVID-19 death toll with the death tolls of other causes (like car crashes, influenza, etc.) specifically in one country.
+
 Note: By editing the first few lines of the source code, this data visualizer can show data from other countries, such as India.
 
-Seen at 11:30 in the 2021-05-31 video: https://www.youtube.com/watch?v=b1hRKhHhOF4&t=690s
+Seen at 11:30 in the 2020-05-31 video: https://www.youtube.com/watch?v=b1hRKhHhOF4&t=690s
 
 ![Country Flu Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/countryFlu/countryFluPreview.png?raw=true)
 
@@ -68,6 +70,12 @@ Note: This visualization seems to downplay the severity of the virus, which I no
 Seen at 5:44 in the 2020-02-12 video: https://www.youtube.com/watch?v=6dDD2tHWWnU&t=344s
 
 ![Nervous Emoji Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/nervousEmoji/nervousEmojiPreview.png?raw=true)
+
+# USA Flu
+
+Compares the COVID-19 death toll in the United States with the death tolls of other causes (like car crashes, influenza, etc.). It is also aligned to see October 1 as the start of each year, because October 1 is the start of the "flu season". The goal is to see if COVID-19's trends fits in with the pattern of annual flu waves, and it does not.
+
+Seen at 6:27 in the 2020-05-31 video: https://www.youtube.com/watch?v=b1hRKhHhOF4&t=387s
 
 # With Guzheng
 
