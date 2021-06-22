@@ -7,6 +7,14 @@ Seen at 3:14 in the 2020-02-28 video: https://www.youtube.com/watch?v=9PYKYjkqnG
 
 ![China Dot Map Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/chinaDotMap/chinaDotMapPreview.png?raw=true)
 
+# Country Flu
+
+Note: By editing the first few lines of the source code, this data visualizer can show data from other countries, such as India.
+
+Seen at 11:30 in the 2021-05-31 video: https://www.youtube.com/watch?v=b1hRKhHhOF4&t=690s
+
+![Country Flu Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/countryFlu/countryFluPreview.png?raw=true)
+
 # Falling Piles
 
 Seen at 2:51 in the 2020-04-02 video: https://www.youtube.com/watch?v=sz1bGzYdRdk&t=171s
