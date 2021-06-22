@@ -33,6 +33,16 @@ Seen at 1:30 in the 2021-01-21 video: https://www.youtube.com/watch?v=i7SNyzmKXU
 
 ![Floating Bubble Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/floatingBubble/floatingBubblePreview.png?raw=true)
 
+# Gapminder Inspired
+
+Inspired by Hans Rosling's work with scatter plot visualizations at Gapminder: https://www.gapminder.org/
+
+Seen at 0:17 in the 2020-11-07 video: https://www.youtube.com/watch?v=eeiguFaRil0&t=17s
+
+Seen at 2:27 in the 2021-01-21 video: https://www.youtube.com/watch?v=i7SNyzmKXUE&t=2m27s
+
+![Gapminder Inspired Preview](https://github.com/carykh/AbacabaCOVID19/blob/main/gapminderInspired/gapminderInspiredPreview.png?raw=true)
+
 # Korea USA
 
 Seen at 0:00 in the 2020-06-29 video: https://www.youtube.com/watch?v=3HHOK1gNypE
