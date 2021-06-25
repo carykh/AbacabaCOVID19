@@ -1,8 +1,8 @@
 import java.util.*;
 import com.hamoid.*;
-String VIDEO_FILENAME = "coronavirus_2021-06-19-line_vid.mp4";
-boolean SAVE_VIDEO = false;
-int LAST_DAY = 536;
+String VIDEO_FILENAME = "coronavirus_2021-06-24-line_vid.mp4";
+boolean SAVE_VIDEO = true;
+int LAST_DAY = 541;
 int SPECIAL = 1;
 int DELAY_BEFORE_ZOOM = 10;
 int ZOOM_LENGTH = 26;
