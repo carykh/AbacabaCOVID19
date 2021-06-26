@@ -1,5 +1,5 @@
-# AbacabaCOVID19
-A repository for my COVID-19 visualizations. Here's a playlist of those videos: https://www.youtube.com/user/1abacaba1/videos
+# Khosraw-AbacabaCOVID19
+A fork of the repository for Abacaba's COVID-19 visualizations. Here's a playlist of those videos: https://www.youtube.com/user/1abacaba1/videos
 
 This Github repo was announced and explained in this video, from 2021-06-25: https://www.youtube.com/watch?v=dkbNXQFc4Ro
 
