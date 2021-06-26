@@ -210,7 +210,7 @@ void drawTitles(){
   float a = min(max((currentDay-260)/260,0),1);
   scale(1-0.13*a);
   textAlign(LEFT);
-  String dateStr = dayToDateStr(currentDayInt-1,true);
+  String dateStr = dayToDateStr(currentDayInt,true);
   if(expoContinue >= 0){
     fill(255);
     textFont(font,60);
@@ -467,17 +467,17 @@ void drawEllipse(int day, long count, float x, float y, int d, float alpha){
       ellipse(0,0,realR,realR);
     }
     pushMatrix();
-    if(d == SPECIAL && day == LAST_DAY && expoContinue < 0){
+    /*if(d == SPECIAL && day == LAST_DAY && expoContinue < 0){
       float a = min(max((currentDay-160)/20,0),1);
       translate(a*168,a*116);
-    }
+    }*/
     if(alpha > 0){
       fill(red(cols[d]),green(cols[d]),blue(cols[d]),alpha*255);
       textAlign(RIGHT);
       if(!derive){
         if(d == SPECIAL && day == LAST_DAY && expoContinue < 0){
-          text("COVID-19",40,-ELLIPSE_R-86);
-          text(commafy(count,true),20,-ELLIPSE_R-48);
+          text("COVID-19",0,-ELLIPSE_R-86);
+          text(commafy(count,true),0,-ELLIPSE_R-48);
           text("(TBD)",0,-ELLIPSE_R-10);
         }else{
           text(commafy(count,true),0,-ELLIPSE_R-10);
