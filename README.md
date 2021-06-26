@@ -1,5 +1,5 @@
 # AbacabaCOVID19
-A dumping ground for all my COVID-19 visualizations posted here: https://www.youtube.com/user/1abacaba1/videos
+A repository for my COVID-19 visualizations. Here's a playlist of those videos: https://www.youtube.com/user/1abacaba1/videos
 
 This Github repo was announced and explained in this video, from 2021-06-25: https://www.youtube.com/watch?v=dkbNXQFc4Ro
 
