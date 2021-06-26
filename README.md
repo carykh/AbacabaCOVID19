@@ -1,6 +1,8 @@
 # AbacabaCOVID19
 A dumping ground for all my COVID-19 visualizations posted here: https://www.youtube.com/user/1abacaba1/videos
 
+This Github repo was announced and explained in this video, from 2021-06-25: https://www.youtube.com/watch?v=dkbNXQFc4Ro
+
 These visualizations all use Processing 3 to draw the actual visualization videos: https://processing.org/  If you'd like to run these code snippets and save them to a video file, you'll also need "Hamoid's Video Exporter", a library that allows to export directly to .mp4 video files from within Processing. Here is a demonstration of me downloading and using the Hamoid library: https://www.youtube.com/watch?v=ol6PM0BMjzI&list=PLsRQr3mpFF3Khoca0cXA8-_tSloCwlZK8&index=10  A handful of visualizations also have Python scripts to do non-video related tasks, like sound processing.
 
 
