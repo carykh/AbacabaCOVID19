@@ -10,7 +10,6 @@ for i in range(365):
 f.flush()
 f.close()"""
 
-
 """f = open("car.tsv","w+")
 cum = 0
 for i in range(365):
@@ -21,12 +20,12 @@ for i in range(365):
 f.flush()
 f.close()"""
 
-f = open("brazil_flu.tsv","w+")
+f = open("brazil_flu.tsv", "w+")
 cum = 0
 for i in range(366):
-    daily = 2116/365
-    fac = 1-math.cos((i/365*2)*math.pi)*0.4
-    cum += daily*fac
-    f.write(str(int(round(cum)))+",")
+    daily = 2116 / 365
+    fac = 1 - math.cos((i / 365 * 2) * math.pi) * 0.4
+    cum += daily * fac
+    f.write(str(int(round(cum))) + ",")
 f.flush()
 f.close()

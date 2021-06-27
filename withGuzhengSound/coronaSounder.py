@@ -10,21 +10,21 @@ TIMETABLE_FILE = "chinaSoundTimetable.txt"
 OUTPUT_FILE = "chinaSoundTimetable.wav"
 SOUND_FILES = "sounds/guzheng"
 
-f = open(TIMETABLE_FILE,"r+",encoding="utf-8")
+f = open(TIMETABLE_FILE, "r+", encoding="utf-8")
 lines = f.read().split("\n")
 f.close()
 
-lengthInSeconds = int(5*60)
+lengthInSeconds = int(5 * 60)
 sampleRate = 44100
-totalSampleCount = lengthInSeconds*sampleRate
+totalSampleCount = lengthInSeconds * sampleRate
 
-totalAudio = np.zeros((totalSampleCount,2))
+totalAudio = np.zeros((totalSampleCount, 2))
 
 bell = []
 bellLength = []
 
 for z in range(6):
-    _, bella = read(SOUND_FILES+str(z)+".wav")
+    _, bella = read(SOUND_FILES + str(z) + ".wav")
     bell.append(bella)
     bellLength.append(len(bella))
 
@@ -32,11 +32,11 @@ for i in range(len(lines)):
     line = lines[i]
     if len(line) >= 1:
         time = int(line)
-        choice = bell[i%6]
-        totalAudio[time:time+len(choice)] += choice
-    if i%100 == 0:
-        print("Done with "+str(i))
-    
+        choice = bell[i % 6]
+        totalAudio[time:time + len(choice)] += choice
+    if i % 100 == 0:
+        print("Done with " + str(i))
+
 totalAudio /= np.amax(totalAudio)
 
 write(OUTPUT_FILE, sampleRate, totalAudio)
