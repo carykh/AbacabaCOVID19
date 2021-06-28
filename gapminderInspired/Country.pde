@@ -34,14 +34,6 @@ class Country{
     }
     return 0;
   }
-  int[] commaSeparate(String s){
-    String[] parts = s.split(",");
-    int[] results = new int[DAY_LEN];
-    for(int i = 0; i < DAY_LEN; i++){
-      results[i] = Integer.parseInt(parts[i]);
-    }
-    return results;
-  }
   double getCPC(double day){
     return getAV(day,smoothedCases,population);
   }

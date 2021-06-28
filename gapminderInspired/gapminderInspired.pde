@@ -6,6 +6,7 @@ import com.hamoid.*;
 
 String VIDEO_FILE_NAME = "output_C11_UNITEDSTATES_2021-06-21.mp4";
 int DAY_LEN = 538;
+double daySpeed = 0.5;
 
 
 // ************** US STATE SETTINGS ***************
@@ -46,15 +47,12 @@ int START_DATE = 18262;
 float X_MIN = 100;
 float X_MAX = 1860;
 float X_W = X_MAX-X_MIN;
-
 float Y_MIN = 0;
 float Y_MAX = 1000;
 float Y_H = Y_MAX-Y_MIN;
 
 PFont fontSmall;
 PFont fontBig;
-
-
 
 PImage coronavirusImage;
 
@@ -68,7 +66,6 @@ int vidC = -1;
 VideoExport videoExport;
 
 double currentDay = 0;
-double daySpeed = 0.04;
 
 void setup(){
   if(vidCountry.length() >= 1){
