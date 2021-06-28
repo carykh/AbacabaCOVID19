@@ -4,25 +4,25 @@ import java.util.Date;
 import java.text.*;
 import com.hamoid.*;
 
-String VIDEO_FILE_NAME = "output_C11_UNITEDSTATES_2021-06-21.mp4";
-int DAY_LEN = 538;
+String DATA_LOCATION = "countryData/fullData_country_2021-06-27.tsv";
+String VIDEO_FILE_NAME = "OUTPUTTED_VIDEO.mp4";
 
-
+/*
 // ************** US STATE SETTINGS ***************
+
 String[] CONTINENT_NAMES = {"pa","ro","sw","mw","se","ne"};
 color[] CONTINENT_COLORS = {color(0,50,255),color(140,0,255),
 color(180,88,0),color(140,133,0),color(230,0,0),color(0,135,0)};
 String[] CONTINENT_LNAMES = {"Pacific", "Rocky Mountains",
 "Southwest", "Midwest", "Southeast", "Northeast"};
 int COUNTRY_COUNT = 51;
-String DATA_LOCATION = "../usStateData/fullData_usState_2021-06-21.tsv";
 String REGIONALS_LOCATION = "../usRegions.tsv";
 float BUBBLE_SIZE_MULTIPLIER = 0.0038;
 String DESCRIPTOR = "United States";
 // **********************************************
+*/
 
 
-/*
 //  *************** WORLDWIDE SETTINGS ***************
 
 String[] CONTINENT_NAMES = {"na","sa","e","af","as","oc"};
@@ -31,13 +31,12 @@ color(0,135,0),color(140,133,0),color(0,50,255),color(230,0,0)};
 String[] CONTINENT_LNAMES = {"North America", "South America",
 "Europe", "Africa", "Asia", "Oceania"};
 int COUNTRY_COUNT = 216;
-String DATA_LOCATION = "countryData/fullData_country_2021-06-21.tsv";
 String REGIONALS_LOCATION = "continents.tsv";
 float BUBBLE_SIZE_MULTIPLIER = 0.001;
 String DESCRIPTOR = "Worldwide";
 // **********************************************
-*/
 
+int DAY_LEN = -1; // Will be set to the number of days until the final date on the worldometers pages. (Set near the start of void setup().)
 Country[] countries = new Country[COUNTRY_COUNT];
 String[] data;
 String[] continentData;
@@ -58,28 +57,22 @@ PFont fontBig;
 
 PImage coronavirusImage;
 
-double[] casesWorld = new double[DAY_LEN];
-double[] deathsWorld = new double[DAY_LEN];
-double[] casesTotal = new double[DAY_LEN];
-double[] deathsTotal = new double[DAY_LEN];
+double[] casesWorld;
+double[] deathsWorld;
+double[] casesTotal;
+double[] deathsTotal;
 
 String vidCountry = "";
 int vidC = -1;
 VideoExport videoExport;
 
 double currentDay = 0;
-double daySpeed = 0.04;
+double daySpeed = 0.5;
 
 void setup(){
   if(vidCountry.length() >= 1){
     int IOP = vidCountry.indexOf(".");
     VIDEO_FILE_NAME = VIDEO_FILE_NAME.substring(0,IOP)+"_"+vidCountry+VIDEO_FILE_NAME.substring(IOP,VIDEO_FILE_NAME.length());
-  }
-  for(int d = 0; d < DAY_LEN; d++){
-    casesWorld[d] = 0;
-    deathsWorld[d] = 0;
-    casesTotal[d] = 0;
-    deathsTotal[d] = 0;
   }
   ellipseMode(RADIUS);
   coronavirusImage = loadImage("coronavirus.png");
@@ -87,6 +80,18 @@ void setup(){
   fontBig = loadFont("Jygquip1-80.vlw");
   data = loadStrings(DATA_LOCATION);
   continentData = loadStrings(REGIONALS_LOCATION);
+  DAY_LEN = getDayLen(data);
+  
+  casesWorld = new double[DAY_LEN];
+  deathsWorld = new double[DAY_LEN];
+  casesTotal = new double[DAY_LEN];
+  deathsTotal = new double[DAY_LEN];
+  for(int d = 0; d < DAY_LEN; d++){
+    casesWorld[d] = 0;
+    deathsWorld[d] = 0;
+    casesTotal[d] = 0;
+    deathsTotal[d] = 0;
+  }
   for(int c = 0; c < COUNTRY_COUNT; c++){
     countries[c] = new Country(data[c],continentData[c]);
     if(vidCountry.equals(countries[c].name)){
@@ -122,6 +127,18 @@ void draw(){
   }
   currentDay += daySpeed;
 }
+int getDayLen(String[] data){
+  String[] parts = data[0].split("\t");
+  return commaSeparate(parts[2]).length;
+}
+int[] commaSeparate(String s){
+    String[] parts = s.split(",");
+    int[] results = new int[parts.length];
+    for(int i = 0; i < parts.length; i++){
+      results[i] = Integer.parseInt(parts[i]);
+    }
+    return results;
+  }
 void drawExternals(){
   drawExternal("Influenza",true,0.00036287761d,0.000000157d);
   drawExternal("2014 Ebola",true,0.0000071d,0.0000028d);
