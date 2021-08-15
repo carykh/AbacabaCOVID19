@@ -1,5 +1,7 @@
 # Khosraw-AbacabaCOVID19
 
+NOTE: THIS REPOSITORY WILL NOT ADD ANYTHING UNLESS THERE IS AN ISSUE OR A SUGGESTION OPEN TO ADDRESS. 
+
 A fork of the repository for Abacaba's COVID-19 visualizations. Here's a playlist of those
 videos: https://www.youtube.com/user/1abacaba1/videos
 
